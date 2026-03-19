@@ -1,1 +1,98 @@
-みゆ
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miyu's Page</title>
+<style>
+body{
+  margin:0;
+  font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  background: linear-gradient(#fff0f5,#ffe4e1);
+  color:#444;
+}
+header{
+  text-align:center;
+  padding:60px 20px;
+}
+header h1{
+  font-size:48px;
+  color:#ff6fa5;
+}
+header p{
+  font-size:18px;
+}
+section{
+  max-width:800px;
+  margin:40px auto;
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+h2{
+  color:#ff6fa5;
+}
+footer{
+  text-align:center;
+  padding:20px;
+  font-size:14px;
+  color:#888;
+}
+.sakura{
+  position:fixed;
+  top:-10px;
+  animation: fall linear infinite;
+}
+@keyframes fall{
+  to{ transform: translateY(110vh); }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>みゆのWEBページ</h1>
+  <p>ようこそ！春の自己紹介ページへ🌸</p>
+</header>
+
+<section>
+  <h2>自己紹介</h2>
+  <p>こんにちは、みゆです！
+  このページは私の自己紹介ページです。
+  春のように明るく楽しいページを作りました。</p>
+</section>
+
+<section>
+  <h2>好きなこと</h2>
+  <ul>
+    <li>音楽を聴くこと</li>
+    <li>友達と遊ぶこと</li>
+    <li>カフェに行くこと</li>
+  </ul>
+</section>
+
+<section>
+  <h2>メッセージ</h2>
+  <p>このページを見てくれてありがとうございます！</p>
+</section>
+
+<footer>
+  © 2026 Miyu
+</footer>
+
+<script>
+for(let i=0;i<15;i++){
+  const sakura=document.createElement('div');
+  sakura.textContent='🌸';
+  sakura.classList.add('sakura');
+  sakura.style.left=Math.random()*100+'vw';
+  sakura.style.animationDuration=(5+Math.random()*5)+'s';
+  sakura.style.fontSize=(15+Math.random()*20)+'px';
+  document.body.appendChild(sakura);
+}
+</script>
+
+</body>
+</html>
+
